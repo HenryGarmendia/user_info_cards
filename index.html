@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Project 💁 | Henry Garmendia</title>
+
+    <!-- BOOTSTRAP FRAMEWORK -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="display-3"><i class="fa fa-id-card" aria-hidden="true"></i> User_card Exercise</h1>
+        <hr class="my-4">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-6 col-md-3 form_container">
+                    <form action="" id="user_form">
+                        <div class="form-group">
+                            <label for="user_name">Your Name</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                                </div>
+                                <input type="text" class="form-control" id="user_name" placeholder="Enter Your Name">
+                            </div><!-- //input-group END -->
+                        </div><!-- //form-group END -->
+
+                        <div class="form-group">
+                            <label for="user_email">Your Email</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                </div>
+                                <input type="text" class="form-control" id="user_email" placeholder="Enter Your Email">
+                            </div><!-- //input-group END -->
+                        </div><!-- //form-group END -->
+
+                        <div class="form-group">
+                            <label for="user_age">Your Age</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-retweet" aria-hidden="true"></i>
+                                </div>
+                                <input type="text" class="form-control" id="user_age" placeholder="Enter Your Age">
+                            </div><!-- //input-group END -->
+                        </div><!-- //form-group END -->
+
+                        <div class="form-group">
+                            <label for="user_description">Your Story</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-user-secret" aria-hidden="true"></i>
+                                </div>
+                                <textarea class="form-control" id="user_description" placeholder="Tell Your Story" rows="3"></textarea>
+                            </div><!-- //input-group END -->
+                        </div><!-- //form-group END -->
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-block"><i class="fa fa-plus" aria-hidden="true"></i> Add user</button>
+
+                    </form>
+                </div><!-- //form_container END -->
+
+                <div class="col-12 col-md-9 content_container">
+                    <div class="card" style="width: 20rem;">
+                        <!-- <div class="card-delete" data-card="">x</div> -->
+                        <img class="card-img-top" src="http://placeskull.com/250/250/f1c40f" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Henry Garmendia</h4>
+                            <p class="card-text">henry@gmail.com</p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-danger pull-right">Delete Card</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- //row END -->
+        </div><!-- //container-fluid END -->
+    </div><!-- //container END -->
+
+</body>
+<!-- BOOTSTRAP JAVASCRIPT -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<!-- MAIN JAVASCRIPT -->
+<script type="text/javascript" src="app.js"></script>
+</html>

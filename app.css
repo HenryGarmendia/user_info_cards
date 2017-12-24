@@ -1,0 +1,20 @@
+.display-3 i {
+    color: #3498db;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background: #3498db;
+}
+
+.btn-primary:hover {
+    background: #2d83bd;
+}
+
+.btn-block i {
+    margin-right: 10px;
+}
+
+.card img {
+    height: 200px;
+}
