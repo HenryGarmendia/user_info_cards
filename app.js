@@ -65,18 +65,34 @@ var db = [
                 user_email  = document.querySelector('#user_email').value,
                 user_age    = parseInt(document.querySelector('#user_age').value),
                 user_bio    = document.querySelector('#user_bio').value;
-            // reset the form after submition
-            user_form.reset();
-            // push data to db array)
-            db.push({img:"http://placeskull.com/250/250/34495e", name:user_name, email:user_name, age:user_age, bio:user_bio});
-            generate_card(db);
+
+            var all_inputs  = [user_name, user_email, user_age, user_bio];
+
+            if (is_valid(all_inputs)) {
+                // reset the form after submition
+                user_form.reset();
+                // push data to db array)
+                db.push({img:"http://placeskull.com/250/250/34495e", name:user_name, email:user_name, age:user_age, bio:user_bio});
+                generate_card(db);
+            } else {
+                alert('error: fields cannot be blank!');
+            }
         }
         
         user_form.addEventListener('submit', function(e) {
             e.preventDefault();
             user_values();
         });
-    }
+    };
+
+    this.is_valid = function(user_input) {
+        for (let i = 0; i < user_input.length; i++) {
+            if (user_input[i] === '') {
+                return false;
+            }
+        }
+        return true;
+    };
 
     this.init();
 
