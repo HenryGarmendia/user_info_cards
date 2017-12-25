@@ -75,7 +75,13 @@ var db = [
                 db.push({img:"http://placeskull.com/250/250/34495e", name:user_name, email:user_name, age:user_age, bio:user_bio});
                 generate_card(db);
             } else {
-                alert('error: fields cannot be blank!');
+                var error_msg = document.querySelector('#error');
+                // error_msg = error_msg.textContent = 'error: Fields cannot be blank!';
+
+                error_msg.style.display = 'block';
+                setTimeout(() => {
+                    error_msg.style.display = 'none';
+                }, 2000);
             }
         }
         

@@ -31,3 +31,7 @@
 .col-3 {
     max-width: 33%;
 }
+
+#error {
+    display: none;
+}
