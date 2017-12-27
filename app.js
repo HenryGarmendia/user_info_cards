@@ -52,7 +52,7 @@ function getRandomColor() {
             output +=       '<img class="card-img-top user_img" src="'+ db[i].img +'" alt="Skull image card">';
             output +=       '<div class="card-body">';
             output +=           '<h4 class="card-title">'+ db[i].name +'</h4>';
-            output +=           '<p class="card-text">'+ db[i].email + '<span class="age_span">' + db[i].age + '</span></p>';
+            output +=           '<p class="card-text">'+ db[i].email + '<span class="age_span rounded">' + db[i].age + '</span></p>';
             output +=           '<p class="card-text">'+ db[i].bio +'</p>';
             output +=           '<a href="#" class="btn btn-danger pull-right" id="delete_card" data-button"'+ i +'">Delete Card</a>';
             output +=       '</div>';
