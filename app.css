@@ -29,9 +29,10 @@
 }
 
 .col-3 {
-    /* display: flex;
-    flex-wrap: wrap; */
+    display: flex;
+    flex-wrap: wrap;
     max-width: 33%;
+    padding-right: 5px;
 }
 
 #error {
@@ -44,11 +45,12 @@
 
 .age_span {
     background-color: rgba(0, 0, 0, 0.342);
-    border: 1px solid rgba(143, 128, 128, 0.795);
+    border: 1px solid rgba(143, 128, 128, 0.658);
+    box-shadow: 2px 3px 5px #04131d34;
     border-radius: 100%;
     color: white;
     padding: 5px 8px;
     position: absolute;
     right: 5px;
-    top: 147px;
+    top: 158px;
 }
