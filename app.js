@@ -3,21 +3,21 @@ var db = [
     {
         img: "http://placeskull.com/250/250/f1c40f",
         name: "Henry Garmendia",
-        email: "henry@gmail.com",
+        email: "henry@example.com",
         age: 37,
         bio: "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem."
     },
     {
         img: "http://placeskull.com/250/250/d35400",
         name: "Jeff Smith",
-        email: "jeff@gmail.com",
+        email: "jeff@example.com",
         age: 17,
         bio: "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a, convallis at tellus. Nulla quis lorem."
     },
     {
         img: "http://placeskull.com/250/250/8e44ad",
         name: "Anna Bananna",
-        email: "anna@gmail.com",
+        email: "anna@example.com",
         age: 27,
         bio: "Quisque velit nisi, pretium ut lacinia in, elementum id enim, convallis at tellus. Nulla quis lorem."
     }
