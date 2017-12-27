@@ -29,10 +29,11 @@
 }
 
 .col-3 {
-    display: flex;
-    flex-wrap: wrap;
+    /* === GOIN TO FIX THE MOBILE VERSION */
+    /* display: flex;
+    flex-wrap: wrap; */
     max-width: 33%;
-    padding-right: 5px;
+    /* padding-right: 5px; */
 }
 
 #error {
@@ -45,7 +46,7 @@
 
 .age_span {
     background-color: rgba(0, 0, 0, 0.342);
-    border: 1px solid rgba(143, 128, 128, 0.658);
+    border: 1px solid rgba(223, 209, 209, 0.493);
     box-shadow: 2px 3px 5px #04131d34;
     border-radius: 100%;
     color: white;
