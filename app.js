@@ -31,7 +31,7 @@ function getRandomColor() {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
-}
+};
 
 (function Cards(db) {
     // run functions when page load
@@ -47,12 +47,12 @@ function getRandomColor() {
         var output = '';
 
         for (var i = 0; i < db.length; i++) {
-            output += '<div class="col-3">';
+            output += '<div class="col-3 col-xs-12">';
             output +=   '<div class="card" style="width: 17rem;">';
             output +=       '<img class="card-img-top user_img" src="'+ db[i].img +'" alt="Skull image card">';
             output +=       '<div class="card-body">';
             output +=           '<h4 class="card-title">'+ db[i].name +'</h4>';
-            output +=           '<p class="card-text">'+ db[i].email + db[i].age +'</p>';
+            output +=           '<p class="card-text">'+ db[i].email + '<span class="age_span">' + db[i].age + '</span></p>';
             output +=           '<p class="card-text">'+ db[i].bio +'</p>';
             output +=           '<a href="#" class="btn btn-danger pull-right" id="delete_card" data-button"'+ i +'">Delete Card</a>';
             output +=       '</div>';
@@ -84,6 +84,7 @@ function getRandomColor() {
             if (is_valid(all_inputs)) {
                 // reset the form after submition
                 user_form.reset();
+
                 // push data to db array)
                 db.push({img:"http://placeskull.com/250/250/"+ getRandomColor() +"", name:user_name, email:user_name, age:user_age, bio:user_bio});
                 generate_card(db);
