@@ -1,3 +1,4 @@
+
 var db = [
     {
         img: "http://placeskull.com/250/250/f1c40f",
@@ -22,6 +23,16 @@ var db = [
     }
 ];
 
+// hex color random generator
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
 (function Cards(db) {
     // run functions when page load
     this.init = function() {
@@ -43,7 +54,7 @@ var db = [
             output +=           '<h4 class="card-title">'+ db[i].name +'</h4>';
             output +=           '<p class="card-text">'+ db[i].email + db[i].age +'</p>';
             output +=           '<p class="card-text">'+ db[i].bio +'</p>';
-            output +=           '<a href="#" class="btn btn-danger pull-right" id="delete_card">Delete Card</a>';
+            output +=           '<a href="#" class="btn btn-danger pull-right" id="delete_card" data-button"'+ i +'">Delete Card</a>';
             output +=       '</div>';
             output +=   '</div>';
             output += '</div>';
@@ -52,7 +63,7 @@ var db = [
         user_card.innerHTML = '';
         /* insertAdjacentHTML() parses the specified text as HTML or XML and inserts the resulting nodes into the DOM tree at a specified position. */
         user_card.insertAdjacentHTML('beforeend', output);
-        // invoke the delete_card() 
+        // invoke the delete_card()
         delete_card();
     };
 
@@ -74,7 +85,7 @@ var db = [
                 // reset the form after submition
                 user_form.reset();
                 // push data to db array)
-                db.push({img:"http://placeskull.com/250/250/34495e", name:user_name, email:user_name, age:user_age, bio:user_bio});
+                db.push({img:"http://placeskull.com/250/250/"+ getRandomColor() +"", name:user_name, email:user_name, age:user_age, bio:user_bio});
                 generate_card(db);
             } else {
                 var error_msg = document.querySelector('#error');
@@ -103,11 +114,21 @@ var db = [
     };
 
     this.delete_card = function() {
-        var delete_card = Array.from(document.querySelectorAll('#delete_card'));
+        var delete_button = Array.from(document.querySelectorAll('#delete_card'));
 
-        delete_card.addEventListener('click', function(e) {
-            console.log(delete_card);
-        });
+        function delete_element(element) {
+            var el_card = element.getAttribute('data-card');
+
+            /* The splice() method changes the contents of an array by removing existing elements and/or adding new elements. */
+            db.splice(el_card, 1);
+            generate_card();
+        };
+
+        for (let i = 0; i < delete_button.length; i++) {
+            delete_button[i].addEventListener('click', function(e) {
+                delete_element(this);
+            });
+        };
     };
 
     this.init();
