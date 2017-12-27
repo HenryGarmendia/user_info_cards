@@ -43,15 +43,17 @@ var db = [
             output +=           '<h4 class="card-title">'+ db[i].name +'</h4>';
             output +=           '<p class="card-text">'+ db[i].email + db[i].age +'</p>';
             output +=           '<p class="card-text">'+ db[i].bio +'</p>';
-            output +=           '<a href="#" class="btn btn-danger pull-right">Delete Card</a>';
+            output +=           '<a href="#" class="btn btn-danger pull-right" id="delete_card">Delete Card</a>';
             output +=       '</div>';
             output +=   '</div>';
             output += '</div>';
         };
+        
         user_card.innerHTML = '';
         /* insertAdjacentHTML() parses the specified text as HTML or XML and inserts the resulting nodes into the DOM tree at a specified position. */
         user_card.insertAdjacentHTML('beforeend', output);
-
+        // invoke the delete_card() 
+        delete_card();
     };
 
     this.user_data = function() {
@@ -82,8 +84,8 @@ var db = [
                 setTimeout(() => {
                     error_msg.style.display = 'none';
                 }, 2000);
-            }
-        }
+            };
+        };
         
         user_form.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -98,6 +100,14 @@ var db = [
             }
         }
         return true;
+    };
+
+    this.delete_card = function() {
+        var delete_card = Array.from(document.querySelectorAll('#delete_card'));
+
+        delete_card.addEventListener('click', function(e) {
+            console.log(delete_card);
+        });
     };
 
     this.init();
